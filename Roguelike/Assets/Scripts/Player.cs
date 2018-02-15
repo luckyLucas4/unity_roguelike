@@ -60,6 +60,7 @@ public class Player : MovingObject {
 
     protected override void AttemptMove <T> (int xDir, int yDir)
     {
+        Debug.Log("Moving");
         food--;
         foodText.text = "Food: " + food;
 

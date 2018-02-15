@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour {
 
     private Text levelText;
     private GameObject levelImage;
-    private int level = 1;
+    private int level = 0;
     private List<Enemy> enemies;
     private bool enemiesMoving;
     private bool doingSetup;
@@ -32,11 +32,11 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
         enemies = new List<Enemy>();
         boardScript = GetComponent<BoardManager>();
-        InitGame();
 	}
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
+
         level++;
         InitGame();
     }
@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour {
 
     void InitGame()
     {
+        Debug.Log("New manager loaded");
         doingSetup = true;
 
         levelImage = GameObject.Find("LevelImage");

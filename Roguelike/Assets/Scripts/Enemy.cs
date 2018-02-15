@@ -56,8 +56,6 @@ public class Enemy : MovingObject {
 
         hitPlayer.LoseFood(playerDamage);
 
-        throw new System.NotImplementedException();
-
         SoundManager.instance.RandomizeSfx(enemyAttack1, enemyAttack2);
     }
 }
